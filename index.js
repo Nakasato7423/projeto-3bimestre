@@ -2,7 +2,7 @@ import express from 'express'
 
 const app = express()
 const PORT = 3000
-let items = []
+let usuarios = []
 let contador = 1
 
 app.use(express.json())
@@ -25,13 +25,13 @@ if(!usuario){
 }
 
 
-const novoItem = {
+const novoUsuario = {
   id: contador++,
   nome
 }
 
-items.push(novoItem)
-res.status(201).json(novoItem)
+usuarios.push(novoUsuario)
+res.status(201).json(novoUsuario)
 
 usuario.nome = nome
 res.json(usuario)
